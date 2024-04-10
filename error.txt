@@ -1,0 +1,6 @@
+Error: "Error: "none of the requested outputs are valid"none of the requested outputs are valid"
+
+ err: wayland.c:1977: failed to roundtrip Wayland display: Connection reset by peer
+ err: wayland.c:1977: failed to roundtrip Wayland display: Connection reset by peer
+ err: wayland.c:1977: failed to roundtrip Wayland display: Connection reset by peer
+ err: wayland.c:1942: failed to flush wayland socket: Connection reset by peer

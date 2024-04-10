@@ -1,0 +1,101 @@
+[2024-04-10 14:25:32.458] [info] Using configuration file //nix/store/c36jjm530r8msixx8vkvm6h1lzhfd881-waybar-0.9.24/etc/xdg/waybar/config
+[2024-04-10 14:25:32.469] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-04-10 14:25:32.469] [info] Using CSS file //nix/store/c36jjm530r8msixx8vkvm6h1lzhfd881-waybar-0.9.24/etc/xdg/waybar/style.css
+[2024-04-10 14:25:32.548] [warning] module sway/workspaces: Disabling module "sway/workspaces", Socket path is empty
+[2024-04-10 14:25:32.565] [warning] module sway/mode: Disabling module "sway/mode", Socket path is empty
+[2024-04-10 14:25:32.582] [warning] module sway/scratchpad: Disabling module "sway/scratchpad", Socket path is empty
+[2024-04-10 14:25:32.604] [error] media stopped unexpectedly, is it endless?
+[2024-04-10 14:25:32.615] [warning] module sway/window: Disabling module "sway/window", Socket path is empty
+[2024-04-10 14:25:32.634] [warning] module temperature: Disabling module "temperature", Can't open /sys/class/thermal/thermal_zone0/temp
+[2024-04-10 14:25:32.637] [warning] module backlight: Disabling module "backlight", No backlight found
+[2024-04-10 14:25:32.641] [warning] Can't open /dev/input/event5 (are you in the input group?): EACCES Permission denied
+[2024-04-10 14:25:32.641] [warning] Can't open /dev/input/mouse1 (are you in the input group?): EACCES Permission denied
+[2024-04-10 14:25:32.642] [warning] Can't open /dev/input/event4 (are you in the input group?): EACCES Permission denied
+[2024-04-10 14:25:32.642] [warning] Can't open /dev/input/event3 (are you in the input group?): EACCES Permission denied
+[2024-04-10 14:25:32.643] [warning] Can't open /dev/input/event2 (are you in the input group?): EACCES Permission denied
+[2024-04-10 14:25:32.643] [warning] Can't open /dev/input/event1 (are you in the input group?): EACCES Permission denied
+[2024-04-10 14:25:32.644] [warning] Can't open /dev/input/event0 (are you in the input group?): EACCES Permission denied
+[2024-04-10 14:25:32.644] [warning] Can't create libevdev device: EINVAL Invalid argument
+[2024-04-10 14:25:32.645] [warning] Can't open /dev/input/mouse0 (are you in the input group?): EACCES Permission denied
+[2024-04-10 14:25:32.645] [warning] Can't open /dev/input/mice (are you in the input group?): EACCES Permission denied
+[2024-04-10 14:25:32.647] [warning] module keyboard-state: Disabling module "keyboard-state", Failed to find keyboard device: EACCES Permission denied
+[2024-04-10 14:25:32.661] [warning] module sway/language: Disabling module "sway/language", Socket path is empty
+[2024-04-10 14:25:32.664] [warning] No battery named BAT2
+[2024-04-10 14:25:32.851] [info] Bar configured (width: 1920, height: 30) for output: Virtual-1
+[2024-04-10 14:25:33.621] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:35.632] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:37.637] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:39.641] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:41.645] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:43.648] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:45.653] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:47.687] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:49.694] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:51.698] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:53.723] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:55.727] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:57.794] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:25:59.799] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:02.110] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:04.140] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:06.144] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:08.148] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:10.212] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:12.217] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:14.221] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:16.245] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:18.250] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:20.255] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:22.282] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:24.326] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:26.330] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:28.335] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:30.339] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:32.343] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:34.347] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:36.352] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:38.357] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:40.361] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:42.365] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:44.368] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:46.372] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:48.376] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:50.411] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:52.415] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:54.421] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:56.425] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:26:58.428] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:00.432] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:02.440] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:04.444] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:06.449] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:08.453] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:10.457] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:12.461] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:14.465] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:16.469] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:18.474] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:20.478] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:22.483] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:24.528] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:26.532] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:28.570] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:30.576] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:32.580] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:34.585] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:36.589] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:38.605] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:40.609] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:42.615] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:44.619] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:46.624] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:48.630] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:50.635] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:52.640] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:54.644] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:56.648] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:27:58.653] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:28:00.657] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:28:02.659] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:28:04.663] [error] mpd: Failed to connect to MPD: Connection refused
+[2024-04-10 14:28:06.667] [error] mpd: Failed to connect to MPD: Connection refused
