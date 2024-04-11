@@ -9,16 +9,16 @@
         ];
 
     # systemd
-    # boot.loader.systemd-boot.enable = true;
-    # boot.loader.efi.canTouchEfiVariables = true;
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
 
     # grub
-    boot.loader.grub.enable = true;
-    boot.loader.grub.device = "/dev/sda";
-    boot.loader.grub.useOSProber = true;
+    # boot.loader.grub.enable = true;
+    # boot.loader.grub.device = "/dev/sda";
+    # boot.loader.grub.useOSProber = true;
 
-    environment.variables.WLR_RENDERER_ALLOW_SOFTWARE = "1";
-    environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
+    # environment.variables.WLR_RENDERER_ALLOW_SOFTWARE = "1";
+    # environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
     # virtualisation.virtualbox.guest.enable = true;
     # virtualisation.virtualbox.guest.x11 = true;
 
@@ -67,6 +67,8 @@
         waybar
         wofi
         swww
+        xdg-desktop-portal-gtk
+        xdg-desktop-portal-hyprland
         pavucontrol
         pipewire
         dunst
@@ -96,6 +98,15 @@
 
     services.openssh.enable = true;
 
+    services.dbus.enable = true;
+    xdg.portal = {
+        enable = true;
+        wlr.enable = true;
+        extraPortals = [
+            pkgs.xdg-desktop-portal-gtk
+        ];
+    };
+
     networking.firewall.allowedTCPPorts = [21];
     services.vsftpd = {
         enable = true;
@@ -104,7 +115,19 @@
         userlistEnable = true;
         userlist = ["ftp_user"];
     };
-    environment.sessionVariables.DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
+    environment.sessionVariables = rec {
+        XDG_CACHE_HOME  = "$HOME/.cache";
+        XDG_CONFIG_HOME = "$HOME/.config";
+        XDG_DATA_HOME   = "$HOME/.local/share";
+        XDG_STATE_HOME  = "$HOME/.local/state";
+
+        XDG_BIN_HOME    = "$HOME/.local/bin";
+        PATH = [ 
+            "${XDG_BIN_HOME}"
+        ];
+
+        DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
+    };
 
     # services.xserver.enable = true;
     # services.xserver.displayManager.sddm.enable = true;
