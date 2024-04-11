@@ -1,18 +1,18 @@
 { config, pkgs, lib, ... }:
 
 {
-    programs.zsh={
-        enable=true;
-        autocd=true;
-        enableCompletion=true;
-        enableAutosuggestions=true;
-        syntaxHighlighting.enable=true;
+    programs.zsh = {
+        enable = true;
+        autocd = true;
+        enableCompletion = true;
+        autosuggestion.enable = true;
+        syntaxHighlighting.enable = true;
 
-        oh-my-zsh={
-            enable=true;
-            theme="agnoster";
+        oh-my-zsh = {
+            enable = true;
+            theme = "agnoster";
 
-            plugins=[
+            plugins = [
                 "command-not-found"
                 "git"
                 "history"
@@ -20,18 +20,17 @@
             ];
         };
 
-        initExtra=''
-            # ALT+a to accept completion
+        initExtra = ''
+            DEFAULT_USER=$(whoami)
             bindkey '^[a' autosuggest-accept
-            # ALT+e to accept and execute
-            bindkey '^[e' autosuggest-execute
+            bindkey '^[r' autosuggest-execute
         '';
 
-        history={
-            save=1000;
-            size=1000;
-            path="$HOME/.cache/zsh_history";
-            expireDuplicatesFirst=true;
+        history = {
+            save = 1000;
+            size = 1000;
+            path = "$HOME/.cache/zsh_history";
+            expireDuplicatesFirst = true;
         };
     };
 }
