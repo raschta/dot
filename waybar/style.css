@@ -1,6 +1,6 @@
 * {
     border: none;
-    border-radius: 0;
+    border-radius: 0.1rem;
     font-family: "RobotoMono Nerd Font";
 }
 
@@ -16,7 +16,7 @@ window#waybar.hidden {
     margin-top: 6px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: transparent;
     background: transparent;
@@ -27,7 +27,7 @@ window#waybar.hidden {
     margin-left: 12px;
     font-size: 4px;
     margin-bottom: 0px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     background: #161320;
     transition: none;
 }
@@ -37,7 +37,7 @@ window#waybar.hidden {
     color: #B5E8E0;
     background: transparent;
     font-size: 16px;
-    border-radius: 0;
+    border-radius: 0.1rem;
 }
 
 #tags button.occupied {
@@ -72,7 +72,7 @@ window#waybar.hidden {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #161320;
     background: #bd93f9;
@@ -84,7 +84,7 @@ window#waybar.hidden {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #1A1826;
     background: #FAE3B0;
@@ -96,7 +96,7 @@ window#waybar.hidden {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #161320;
     background: #B5E8E0;
@@ -130,7 +130,7 @@ window#waybar.hidden {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #161320;
     background: #F8BD96;
@@ -141,7 +141,7 @@ window#waybar.hidden {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #161320;
     background: #ABE9B3;
@@ -154,7 +154,7 @@ window#waybar.hidden {
     padding-left: 10px;
     margin-bottom: 0px;
     padding-right: 10px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #161320;
     background: #DDB6F2;
@@ -165,7 +165,7 @@ window#waybar.hidden {
     padding-left: 10px;
     margin-bottom: 0px;
     padding-right: 10px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #161320;
     background: #96CDFB;
@@ -177,7 +177,7 @@ window#waybar.hidden {
     padding-left: 10px;
     margin-bottom: 0px;
     padding-right: 10px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #B5E8E0;
     background: #161320;
@@ -189,7 +189,7 @@ window#waybar.hidden {
     margin-left: 8px;
     padding-left: 10px;
     padding-right: 5px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #89DCEB;
     background: #161320;
@@ -203,7 +203,7 @@ window#waybar.hidden {
     padding-left: 10px;
     padding-right: 5px;
     margin-bottom: 0px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #161320;
     background: #F28FAD;
@@ -215,7 +215,7 @@ window#waybar.hidden {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #161320;
     background: #C9CBFF;
@@ -227,7 +227,7 @@ window#waybar.hidden {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #161320;
     background: #E8A2AF;
@@ -239,7 +239,7 @@ window#waybar.hidden {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0px;
-    border-radius: 0;
+    border-radius: 0.1rem;
     transition: none;
     color: #161320;
     background: #F2CDCD;

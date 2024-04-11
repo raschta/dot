@@ -67,6 +67,7 @@
         waybar
         wofi
         swww
+        xdg-utils
         xdg-desktop-portal-gtk
         xdg-desktop-portal-hyprland
         pavucontrol
@@ -104,6 +105,7 @@
         wlr.enable = true;
         extraPortals = [
             pkgs.xdg-desktop-portal-gtk
+            pkgs.xdg-desktop-portal-hyprland
         ];
     };
 
