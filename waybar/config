@@ -1,110 +1,99 @@
 {
     "layer": "top",
-    "position": "bottom",
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "hyprland/language", "battery", "battery#bat2", "clock", "tray"],
+    "position": "top",
+    "modules-left": ["hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "battery", "pulseaudio", "network#vpn", "network#wifi", "network#ethernet", "network#disconnected", "backlight", "idle_inhibitor", "clock"],
     "hyprland/workspaces": {
         "disable-scroll": false,
         "on-click": "activate",
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}: {icon}",
+        "format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
             "urgent": "",
-            "focused": "",
+            "active": "",
             "default": ""
         }
     },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color = \"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 120
     },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
             "activated": "",
             "deactivated": ""
-        }
+        },
+        "tooltip": false
     },
     "tray": {
         "spacing": 10
     },
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "temperature": {
-        "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format": "{:%Y-%m-%d %H:%M}"
     },
     "backlight": {
+        "interval": 1,
+        "on-scroll-down": "brightlight -pd 1",
+        "on-scroll-up": "brightlight -pi 1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
+        "bat": "BAT0",
         "states": {
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "tooltip": "{capacity}%",
+        "format": "{icon}",
+        "format-charging": "",
+        "format-plugged": "",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
+    "network#disconnected": {
+        "tooltip-format": "No connection!",
+        "format-ethernet": "",
+        "format-wifi": "",
+        "format-linked": "",
+        "format-disconnected": "",
+        "on-click": "nm-connection-editor"
     },
-    "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "network#ethernet": {
+        "interface": "enp*",
+        "format-ethernet": "󰈀",
+        "format-wifi": "",
+        "format-linked": "",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor"
+    },
+    "network#wifi": {
+        "interface": "wlp*",
+        "format-ethernet": "",
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-linked": "",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor"
+    },
+    "network#vpn": {
+        "interface": "tun0",
+        "format": "",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor"
     },
     "pulseaudio": {
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format": "{icon} {format_source}",
+        "format-bluetooth": "{format_source}{icon}",
+        "format-bluetooth-muted": "{format_source} {icon}",
+        "format-muted": "{format_source} ",
+        "format-source": "",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -115,7 +104,7 @@
             "car": "",
             "default": ["", "", ""]
         },
+        "tooltip": false,
         "on-click": "pavucontrol"
     }
 }
-

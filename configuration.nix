@@ -9,18 +9,17 @@
         ];
 
     # systemd
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+    # boot.loader.systemd-boot.enable = true;
+    # boot.loader.efi.canTouchEfiVariables = true;
 
     # grub
-    # boot.loader.grub.enable = true;
-    # boot.loader.grub.device = "/dev/sda";
-    # boot.loader.grub.useOSProber = true;
+    boot.loader.grub.enable = true;
+    boot.loader.grub.device = "/dev/sda";
+    boot.loader.grub.useOSProber = true;
 
-    # environment.variables.WLR_RENDERER_ALLOW_SOFTWARE = "1";
-    # environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
-    # virtualisation.virtualbox.guest.enable = true;
-    # virtualisation.virtualbox.guest.x11 = true;
+    environment.variables.WLR_RENDERER_ALLOW_SOFTWARE = "1";
+    environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
+    virtualisation.virtualbox.guest.enable = true;
 
     networking.hostName = "nixos";
     networking.networkmanager.enable = true;
@@ -63,13 +62,18 @@
         wayland-utils
         wl-clipboard
         wlroots
+        xwayland
+        qt6.qtwayland
+        qt5.qtwayland
+        qt5.qtquickcontrols2
+        qt5.qtgraphicaleffects
         hyprland
         waybar
         wofi
         swww
         xdg-utils
-        xdg-desktop-portal-gtk
         xdg-desktop-portal-hyprland
+        unzip
         pavucontrol
         pipewire
         dunst
@@ -83,6 +87,8 @@
         firefox
         dolphin
         vlc
+        keepassxc
+        megasync
 
         vscode
         python3
@@ -92,6 +98,8 @@
         shaderc
         libpng
         vulkan-validation-layers
+
+        (pkgs.callPackage ./sddm-theme {})
     ];
     fonts.packages = with pkgs; [
         (nerdfonts.override { fonts = [ "RobotoMono" ]; })
@@ -103,6 +111,11 @@
     xdg.portal = {
         enable = true;
         wlr.enable = true;
+        xdgOpenUsePortal = true;
+        config = {
+            common.defaut = ["gtk"];
+            hyprland.default = ["gtk" "hyprland"];
+        };
         extraPortals = [
             pkgs.xdg-desktop-portal-gtk
             pkgs.xdg-desktop-portal-hyprland
@@ -117,6 +130,9 @@
         userlistEnable = true;
         userlist = ["ftp_user"];
     };
+
+    # QT_QPA_PLATFORMTHEME,qt6ct
+    environment.variables.NIXOS_OZONE_WL = "1";
     environment.sessionVariables = rec {
         XDG_CACHE_HOME  = "$HOME/.cache";
         XDG_CONFIG_HOME = "$HOME/.config";
@@ -131,9 +147,9 @@
         DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
     };
 
-    # services.xserver.enable = true;
-    # services.xserver.displayManager.sddm.enable = true;
-    # services.xserver.displayManager.sddm.wayland.enable = true;
+    services.displayManager.sddm.enable = true;
+    services.displayManager.sddm.wayland.enable = true;
+    services.displayManager.sddm.theme = "pkgs.sddm-theme";
     # services.xserver.displayManager.sddm.settings = {
     #     Theme = {
     #         Current = "breeze";

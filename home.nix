@@ -10,9 +10,13 @@
         ];
 
         home.stateVersion = "23.11";
-        home.packages = [ ];
+        home.packages = [ (pkgs.callPackage ./gruvbox-plus {}) ];
         home.username = "dom";
         home.homeDirectory = "/home/dom";
+
+        # home.file.".config/gtk-3.0/gtk.css" = { source = ./gtk.css; force = true; };
+        # home.file.".config/gtk-4.0/gtk.css" = { source = ./gtk.css; force = true; };
+
         nixpkgs.config.allowUnfree = true;
         programs.home-manager.enable = true;
         programs.bash.enable = true;
@@ -79,16 +83,25 @@
 
         gtk = {
             enable = true;
-            theme = {
-                name = "Materia-dark";
-                package = pkgs.materia-theme;
-            };
+            cursorTheme.package = pkgs.bibata-cursors;
+            cursorTheme.name = "Bibata-Modern-Ice";
+
+            theme.package = pkgs.adw-gtk3;
+            theme.name = "adw-gtk3";
+
+            iconTheme.package = pkgs.gruvbox-plus;
+            iconTheme.name = "GruvboxPlus";
+            # theme = {
+            #     name = "Materia-dark";
+            #     package = pkgs.materia-theme;
+            # };
         };
 
         qt = {
             enable = true;
-            platformTheme = "gnome";
+            platformTheme = "gtk";
             style.name = "adwaita-dark";
+            style.package = pkgs.adwaita-qt;
         };
 
         # gtk = {
