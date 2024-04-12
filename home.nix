@@ -10,7 +10,7 @@
         ];
 
         home.stateVersion = "23.11";
-        home.packages = [ (pkgs.callPackage ./gruvbox-plus {}) ];
+        home.packages = [ ];
         home.username = "dom";
         home.homeDirectory = "/home/dom";
 
@@ -89,8 +89,8 @@
             theme.package = pkgs.adw-gtk3;
             theme.name = "adw-gtk3";
 
-            iconTheme.package = pkgs.gruvbox-plus;
-            iconTheme.name = "GruvboxPlus";
+            # iconTheme.package = pkgs.gruvbox-plus;
+            # iconTheme.name = "GruvboxPlus";
             # theme = {
             #     name = "Materia-dark";
             #     package = pkgs.materia-theme;

@@ -9,17 +9,17 @@
         ];
 
     # systemd
-    # boot.loader.systemd-boot.enable = true;
-    # boot.loader.efi.canTouchEfiVariables = true;
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
 
     # grub
-    boot.loader.grub.enable = true;
-    boot.loader.grub.device = "/dev/sda";
-    boot.loader.grub.useOSProber = true;
+    # boot.loader.grub.enable = true;
+    # boot.loader.grub.device = "/dev/sda";
+    # boot.loader.grub.useOSProber = true;
 
-    environment.variables.WLR_RENDERER_ALLOW_SOFTWARE = "1";
-    environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
-    virtualisation.virtualbox.guest.enable = true;
+    # environment.variables.WLR_RENDERER_ALLOW_SOFTWARE = "1";
+    # environment.variables.WLR_NO_HARDWARE_CURSORS = "1";
+    # virtualisation.virtualbox.guest.enable = true;
 
     networking.hostName = "nixos";
     networking.networkmanager.enable = true;
@@ -99,7 +99,8 @@
         libpng
         vulkan-validation-layers
 
-        (pkgs.callPackage ./sddm-theme {})
+        (callPackage ./sddm-theme {})
+        (callPackage ./gruvbox-plus {})
     ];
     fonts.packages = with pkgs; [
         (nerdfonts.override { fonts = [ "RobotoMono" ]; })
@@ -149,7 +150,8 @@
 
     services.displayManager.sddm.enable = true;
     services.displayManager.sddm.wayland.enable = true;
-    services.displayManager.sddm.theme = "pkgs.sddm-theme";
+    services.displayManager.sddm.theme = "breeze";
+    services.displayManager.sddm.enableHidpi = true;
     # services.xserver.displayManager.sddm.settings = {
     #     Theme = {
     #         Current = "breeze";
@@ -183,6 +185,7 @@
                 "browser.startup.page" = 3;
                 "network.trr.mode" = 3;
                 "browser.translations.automaticallyPopup" = false;
+                "ui.key.menuAccessKeyFocuses" = false;
             };
         };
     };

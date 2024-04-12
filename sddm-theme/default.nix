@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchFromGitHub }:
+{ stdenv, fetchFromGitHub }:
 
 let
     image = ./bg.jpg;
@@ -12,6 +12,8 @@ in
             sha256 = "0153z1kylbhc9d12nxy9vpn0spxgrhgy36wy37pk6ysq7akaqlvy";
         };
         installPhase = ''
+            mkdir -p $out/share/sddm/themes
+            cp -aR $src $out/share/sddm/themes/sugar-candy
             mkdir -p $out
             cp -R ./* $out/
             cd $out/
