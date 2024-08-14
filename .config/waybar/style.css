@@ -1,0 +1,118 @@
+* {
+    text-shadow: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    font-family: "RobotoMono Nerd Font", "Roboto", "Helvetica", "Arial", "sans-serif";
+    font-size: 1rem;
+    min-height: 1.5rem;
+}
+
+#waybar {
+    border-top: 0.1rem solid rgba(150, 150, 150, 1);
+    background: transparent;
+}
+
+#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* #waybar {
+    background: rgba(0, 50, 0, 1);
+    color: rgba(255, 255, 255, 1);
+} */
+
+#workspaces {
+    color: transparent;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+#workspaces button {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+#workspaces button.active {
+    color: rgba(255, 255, 255, 1);
+    border-bottom: 0.25rem solid rgba(255, 255, 255, 1);
+}
+
+#workspaces button.focused {
+    color: rgba(100, 100, 100, 0.5);
+}
+
+#workspaces button.urgent {
+    background:  rgba(255, 200, 0, 0.35);
+    border-bottom: 0.25rem dashed rgba(255, 200, 0, 0.35);
+    color: rgba(255, 200, 0, 0.35);
+}
+
+#workspaces button:hover {
+    background: rgba(200, 200, 200, 0.3);
+    color: rgba(255, 255, 255, 1);
+}
+
+#taskbar {
+}
+
+#taskbar button {
+    min-width: 15rem;
+    border-bottom: 0.25rem solid rgba(255, 255, 255, 0.3);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: rgba(255, 255, 255, 1);
+    font-weight: normal;
+}
+
+#taskbar button.active {
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+  background: rgba(100, 100, 100, 0.5);
+}
+
+#taskbar button:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+  background: rgba(200, 200, 200, 0.3);
+  color: rgba(255, 255, 255, 1);
+}
+
+tooltip {
+    background: rgba(0, 0, 0, 1);
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+tooltip label {
+    color: rgba(255, 255, 255, 1);
+}
+
+#battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(150, 0, 0, 1);
+        color: rgba(200, 200, 200, 1);
+    }
+}
+
+#custom-os-button {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+#custom-poweroff {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+#custom-os-button, #cpu, #memory, #disk, #tray, #pulseaudio, #network, #battery, #clock, #custom-poweroff {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
