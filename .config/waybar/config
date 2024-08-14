@@ -7,11 +7,11 @@
     "margin-bottom": -1,
     "passthrough": false,
     "modules-left": [
-        "custom/os-button",
-        "hyprland/workspaces",
-        "wlr/taskbar"
+        "custom/os-button"
     ],
-    "modules-center": [],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
     "modules-right": [
         "cpu",
         "memory",

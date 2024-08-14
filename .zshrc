@@ -102,7 +102,6 @@ plugins=(git command-not-found history sudo zsh-autosuggestions zsh-syntax-highl
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 DEFAULT_USER=$(whoami)
-bindkey '^[a' autosuggest-accept
 bindkey '^[r' autosuggest-execute
 
 export ZSH=$HOME/.oh-my-zsh
